@@ -1,0 +1,171 @@
+***********************************************WHAT IS REACT  AND WHY WE NEED TO USE IT ************************************
+let's start on a very basic level.  It is a JS library that is used to make single-page applications,
+ 
+ and it helps to make our app fast using concepts like Components Based Archetct ,virtual DOM, reconciliation, hooks, lazy loading, code splitting, and many more.
+
+ why we need it  bcz using html css js makeing project was bit of slow process due dom paint,slow dom updation,so many elements refrances when we need to make changes.
+  
+ multiple place react does it all in seconds .
+ 
+
+ 
+
++++++++++++++++++++++++++++++++++++++++++   VIRTUAL DOM*************************************************************
+
+->Virtual Dom is lightweight copy of the real dom.which help to react in Ui Updation,
+
+
+Here is the exact step-by-step of how it works:
+
+Initial Render: When our app loads, React builds the Virtual DOM and uses it to paint the real DOM on your screen.
+
+State Change: When a user interacts (like clicking your "Like" button), React creates a brand new, updated Virtual DOM in its memory.
+
+The "Diffing" Phase: React now has two lightweight copies in memory: the Previous Virtual DOM and the New Virtual DOM. It compares these two copies against each other to spot exactly what changed.
+
+The Update (Reconciliation): Once React knows exactly what the difference is, it reaches out to the Real DOM and updates only that specific element.
+
+
+
+
+
+*****************************************REACT FIBER***********************************************
+
+------To Update VirtualDom React Uses ReactFibar Algorithm, 
+------> Key Features of React Fibar is include the ability to pause,abort or reuses work as new updates.in Abiltiy to assign Priority to 
+to Diffrent Type of Updates in Virtual dom
+
+
+********************************************RECONCILIATION************************************************
+----------->it is Algorithm that uses react to difference React tree with Browser Dom tree to determine which parts need to be changed.
+->>>>Reconciliation is the process React uses to compare the previous Virtual DOM tree with the new Virtual DOM tree (called diffing) to determine the minimum changes needed for the UI.
+
+
+*******************************************Diffing Algorithm*****************************************
+---->Diffing Algorithm: The specific algorithm React uses to compare the old Virtual DOM tree and the new Virtual DOM tree to find exactly what changed.
+
+
+++++++++++++++++++++++++++Babel in React++++++++++++++++++++++++++++++++++
+-> Babel is a JavaScript translator used in React.
+-> Which converts React code to plain, standard JavaScript so that browsers can understand and run it
+
+
+**********************IN SORT REACT UNDER THE HOOD ************************
+
+"Virtual DOM is a lightweight copy of the Real DOM which helps React know which part needs to change."
+Reconciliation is the process React uses to compare the previous Virtual DOM tree with the new Virtual DOM tree (called diffing) to determine the minimum changes needed for the UI.
+React Fiber is React's reconciliation engine. It performs reconciliation, schedules updates by priority, breaks rendering into small units, and efficiently updates the Real DOM without blocking the main thread.
+
+
+___________________________-________Lets Start React********************************
+
+*******Props in  React*********************************
+->Props is Basically an empety Object untill we dont share data as Props
+->In React, props (short for "properties") are read-only objects used to pass data from a parent component to a child component 
+->Props are Used to share Data Parent To child Components
+->Props are the read only Property
+->when Props Are changes then react re-rendar the Components
+->Props can be anything: They aren't just for static data like strings or numbers. 
+You can pass objects, arrays, entire React components, and most importantly, functions.
+
+
+************Prop Drilling********
+->In this we have to pass data using props manually even though components do not need that data. 
+->known as 'prop drilling'.
+->To avoid it, we use the context API or Redux Toolkit stuff.
+
+********Components in React *******************
+->in React we Have two Tyes Of Components functional and class based components
+->but functional componets most widley used in modern day
+->components are just reuseable pice of code in react which we can use multiple times in 
+our Project.they accepet Props as Parameter.
+->and they return jsx(this jsx decribe how ui look likes)
+
+*************Jsx in React*******************
+->It stands for JavaScript XML: It is a syntax extension for JavaScript.
+->in React jsx is the combination of Html and javascipt,
+->where it allow us to insert Html in javascipt.
+
+
+
+
+*************State Lifting in React******************
+->it is a react concept which is used when multiple components recived data
+->then child state passes to nearest common parent so that data is accessable in all componets
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Baisc React Of Knowledge Over Here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+
+*************************************Now Learn INbuilt Hooks in React*********************************
+
+***************************now Lets Learn Hooks (UseEffect,Use Ref ,UseCallback hooks)****************
+
+************useState Hook
+->it is used to manage states in react.whenever state changes then components re-rendar
+->It returns an array containing two elements: 
+the current state value (which starts as the initial value you provide) and a setter function used to update that value.
+
+
+
+*UseCallback Hook->
+->It is a performance optimization hook that is used to memoize a function between component re-renders.
+-> It takes a callback function and a dependency array. 
+->and its returns  a memoized function;
+->it stores that memoized function untill dependency array changed .
+
+********useMemo Hook
+->It is a performance optimization hook that is used to memoize a value between component re-renders. 
+->so that havey computations are not calculeted
+-> It takes a callback function and a dependency array. 
+->and its returns  a memoized value;
+->it stores that memoized value untill dependency array changed .
+
+
+
+*UseEffect Hook->
+-> it is used to give sideEffect to the component ,sideEffect like api calls timers,dom manipulations etc.
+-> we have 3 ways to use it 
+->[1] without dependency run on each rendar of component
+->[2] empty dependency array run only once when component mount in app
+->[3]runs when dependency array changed
+->it accept an callback function and dependency array
+-> it has an cleanup function also which used to remove side effect when our task has done
+
+
+*********useRef Hook
+->it is used to persist the value between components re-rendar and Dom-Manupulation
+->it accept an inital value
+
+
+
+*************Context Api
+
+
+***********************************Performance Optimization in React ******************
+
+
+*********** There is some Concepts we will deep dive in these*******
+[1]react.memo
+[2]Code splitting
+[3]Lazy loading
+[4]useMemo() hook
+[5]useCallback() hook
+[5]Pagination
+[6]Infinite Scorlling
+[7]Virtualization(suppose when we have 1000 data to show and we need see app performance also)
+[9]Redux Toolkit
+[10]Web Vitals
+[11]Debouncing
+[12]Throutling
+[13]Local Storage, Session Storage, and Cookies
+[14]Components Life Cycle
+[15]Keys in React 
+
+
+[1] React.memo
+

@@ -1,0 +1,175 @@
+it is javascript thory notes  beyond basis
+
+
+topics
+[1]Event Loop in JavaScript
+[2]Hosting
+[3]Temprol Dead Zone
+[4]Syncronous JavaScript
+
+[6]DataTypes
+[7]Arrow Functions
+[8]This KeyWord
+[9]Shallow Copy-Deep Copy
+[10]Callback Functions
+[11]Clousures In JavaScript
+[12]CallBack Hell
+[13]Promieses
+[14]Event Delegations or Event Bubbleing or Capturing
+[15]Prototypes
+[16]Call ,Bind Apply in JavaScript
+[17]Async\Await
+[18]Timers SetTimeOut Or SetIntervals
+[19]Destructuring in JavaScript
+[20]Fetch Api
+[21]Objects
+[22]Arrays
+[23]Dom Manupulation
+[24]Rest and Spread Operators
+[25] Try Catch  Finally
+
+
+
+*Event Loop ->
+ The JavaScript event loop is used to handle asynchronous tasks in JavaScript;
+it continuously checks if the call stack is empty or not. If it is empty, then it picks tasks from the microtask queue until all tasks are not executed from the microtask queue; 
+then it picks the macro task queue because the microtask has a higher priority. That's why it executes the microtask queue tasks first.
+where micro tasks hold promises, and macro tasks hold events, timers, DOM manipulations, etc. 
+What happens? Actually, first, synchronised or asynchronous tasks come in the call stack.
+The synchronised task executes first and goes out from the call stack, and the asynchronous task is handled by the web API.
+if The task is promised, and then it goes to the microtask queue; otherwise, it goes to the macro task queue. 
+The event loop continuously checks call stack. 
+If it is empty, then it first executes microtasks and then macros because microtasks have higher priority.
+
+
+
+[2]Hosting In JavaScript
+Hosting is a default behaviour in JavaScript where function and variable declarations are moved to the top of their scope during the compilation phase.
+It has 2 phases: first, the memory creation phase, where all functions and variables get memory, 
+and then the execution phase, where the task executes in a synchronous or asynchronous way.
+
+[3]Temporal Dead Zone
+Temporal Dead Zone it is a time   an let or const   varibale declearation to initalize a value to the variable in javascript.
+
+[4]Syncronous JavaScript
+In synchronous JavaScript coding, statements are executed line by line in JavaScript. It follows a top-to-bottom approach.
+
+[5]Asyncronous JavaScript
+Async JavaScript: in JS, it allows us to write non-blocking statements in JavaScript.
+With the help of the asynchronous nature of JS, we can run multiple tasks independently, 
+and those tasks do not affect the synchronous nature of JavaScript?
+
+
+[6]DataTypes
+
+We have 2 Types Of Data Type in JavaScript 
+(1) Premative(number,string,bollean,undefined,null,symbole, etc) 
+(2) Non-Premative (Object and Function)
+
+
+[7]Arrow Functions
+arrow functions, these functions are also known as lambda functions in JS. 
+It is just a shorter and cleaner way to write functions in JS,
+ but they do not have their own this keyword  in JavaScript they inherit from lexical scope.
+  syntex const hii =()=>{ console.log("hii")}
+
+[8] This Keyword  In JavaScript
+this keyword points to an object;
+ its behaviour depends on how a function is called in JavaScript.
+In a method, it points to the object itself; 
+in a regular function, it points to the global object or undefined in strict mode.
+and arrow functions do not have their own this; they inherit from lexical scope.
+
+
+[9]Shallow Copy-Deep Copy
+
+Shallow copy-> In a shallow copy, only top-level properties are copied in objects or arrays;
+ nested properties still point to the same memory reference. 
+Deep Copy-> And in deep copy, it created an independent copy of the object or arrays.
+ That's why memory references do not point to the same memory.
+
+
+[10] CallBack function
+"In JS, a callback function is a function which is passed as an argument to another function to be executed later inside that outer function
+
+
+[11]Clousures in JavaScript
+In JavaScript, a closure is created when an inner function has access to variables and the lexical environment of the outer function,
+even though the outer function has returned, known as a 'closure' in JavaScript, and here is the example of a closure.
+
+function outer(){
+let name = "Sunil"
+return function Inner(){
+console.log(name)
+}
+}
+Let ans=outer()
+ans()
+
+[12]CallBack Hell->
+Callback hell is also known as a peramid of DOM;it is a problem or situation where we have nested callback functions.
+which makes code hard to read, maintain and debug
+
+[13] Promises in JavaScript
+
+promise in javascript ,promies are used to handle asyncronous  operations in javascript .
+it is an object  which is created using promise constructor, 
+which take an executer function with 2 argument resolve and reject to handle the outcome of the Promis.
+
+it has 3 state Pending ,Fulfilled or Rejected,
+
+promises has consumer method as well  .then()  which run when promises get resolve and 
+.catch run when promise rejected and then we have 
+finally() it run weather promise resolve or rejected
+all consumer method accpet an callbackfunctions
+
+promises has static methods as well like ,allsetteled,Promise.all,Promise.rejected,Promies.resolve,Promise.race,Promises.any etc
+
+
+
+[14]Event Delegations or Event Bubbleing or Capturing
+
+->Event bubbling means when an event is triggered on a child element, it propagates upward through its parent elements.
+
+->Event delegation is a technique where, instead of attaching multiple event listeners to individual child elements, we attach a single event listener to the parent element. It works mainly because of event bubbling.
+
+->Event capturing is the opposite direction of bubbling. The event flows from the parent element toward the target child element. We can enable capturing by passing true as the third argument of addEventListener().
+
+
+
+[15]Prototypes
+->Prototypes in javascript is a features that allow objects to inherit properties and methods from other objects.
+
+->every object has hidden property called __proto__ which point to its Prototypes
+
+->in javascript inharitance happens with  Prototypes machinsm
+
+->when we try to access property that does not exist in the object
+
+->javascript looks for it in the Prototypes
+
+
+
+[16]Call ,Bind Apply in JavaScript
+
+->these methods are allow to controle the value of this in JavaScript
+->with the help of these we can controle what will be this value or where this will point 
+
+->Call() it immedeatliy called a function and let you set the value of this ,
+->it accpet 2 paramenters first is this value,secound is individual arguments
+
+->bind() It doesn't immediately execute the function.
+
+->Instead, it returns a new function with this permanently set to the provided object.
+
+
+->Apply it works alomost same as call but it doest take individual arguments
+-
+->it takes arguments as an array
+
+
+
+[17]Async\Await
+
+
+
